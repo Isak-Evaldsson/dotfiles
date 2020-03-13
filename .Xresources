@@ -1,0 +1,61 @@
+!--------------!
+! URxvt config !
+!--------------!
+
+! Font things
+URxvt.internalBorder:	10
+URxvt.scrollBar:	false
+URxvt.letterSpace:	-1
+!URxvt.cursorColor:	#191919
+URxvt.font: xft:Droid Sans Mono:size=10
+
+! Clickable URLs
+URxvt.url-launcher: firefox-bin
+URxvt.matcher.button: 1
+URxvt.fading: 10
+
+! Clipboard
+URxvt.iso14755: false
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+!-------!
+! Theme !
+!-------!
+
+! special
+*.foreground:   #f7f1ff
+*.background:   #222222
+*.cursorColor:  #f7f1ff
+
+! blackfont
+*.color0:       #363537
+*.color8:       #8b888f
+
+! red
+*.color1:       #fc618d
+*.color9:       #fc618d
+
+! green
+*.color3:       #7bd88f
+*.color11:      #7bd88f
+
+! yellow
+*.color2:       #fce566
+*.color10:      #fce556
+
+! blue
+*.color4:       #5ad4e6
+*.color12:      #5ad4e6
+
+! magenta
+*.color5:       #948ae3
+*.color13:      #948ae3
+
+! cyan
+*.color6:       #fd9353
+*.color14:      #fd9353
+
+! white
+*.color7:       #f7f1ff
+*.color15:      #f7f1ff

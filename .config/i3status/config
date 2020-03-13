@@ -1,0 +1,58 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 5
+}
+
+order += "disk /"
+order += "battery 0"
+order += "volume master"
+order += "memory"
+order += "cpu_usage"
+order += "tztime local"
+order += "time"
+
+
+
+battery 0 {
+        format = "%status %percentage"
+        format_down = "No battery"
+        status_chr = ""
+        status_bat = ""
+        status_unk = "? UNK"
+        status_full = ""
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 15
+}
+
+tztime local {
+        format = " %Y-%m-%d"
+}
+
+
+time {
+        format = " %H:%M"
+}
+
+cpu_usage {
+        format = " %usage"
+}
+
+memory {
+        format = " %used"
+        threshold_degraded = "10%"
+        format_degraded = "MEMORY: %free"
+}
+
+disk "/" {
+        format = " %free"
+        prefix_type = "custom"
+}
+
+volume master {
+        format = " %volume"
+        format_muted = " %volume"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
