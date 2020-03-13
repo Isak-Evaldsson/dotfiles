@@ -8,6 +8,9 @@ URxvt.scrollBar:	false
 URxvt.letterSpace:	-1
 !URxvt.cursorColor:	#191919
 URxvt.font: xft:Droid Sans Mono:size=10
+URxvt.transparent:   true
+URxvt.shading:       20
+
 
 ! Clickable URLs
 URxvt.url-launcher: firefox-bin
