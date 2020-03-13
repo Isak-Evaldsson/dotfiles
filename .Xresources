@@ -22,40 +22,79 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 !-------!
 ! Theme !
 !-------!
-
 ! special
-*.foreground:   #f7f1ff
-*.background:   #222222
-*.cursorColor:  #f7f1ff
+*.foreground:   #d7d0c7
+*.background:   #15151500
+*.cursorColor:  #d7d0c7
 
-! blackfont
-*.color0:       #363537
-*.color8:       #8b888f
+! black
+*.color0:       #101010
+*.color8:       #404040
 
 ! red
-*.color1:       #fc618d
-*.color9:       #fc618d
+*.color1:       #e84f4f
+*.color9:       #d23d3d
 
 ! green
-*.color3:       #7bd88f
-*.color11:      #7bd88f
+*.color2:       #b8d68c
+*.color10:      #a0cf5d
 
 ! yellow
-*.color2:       #fce566
-*.color10:      #fce556
+*.color3:       #e1aa5d
+*.color11:      #f39d21
 
 ! blue
-*.color4:       #5ad4e6
-*.color12:      #5ad4e6
+*.color4:       #7dc1cf
+*.color12:      #4e9fb1
 
 ! magenta
-*.color5:       #948ae3
-*.color13:      #948ae3
+*.color5:       #9b64fb
+*.color13:      #8542ff
 
 ! cyan
-*.color6:       #fd9353
-*.color14:      #fd9353
+*.color6:       #6d878d
+*.color14:      #42717b
 
 ! white
-*.color7:       #f7f1ff
-*.color15:      #f7f1ff
+*.color7:       #dddddd
+*.color15:      #dddddd
+
+
+
+!Old theme
+! special
+!*.foreground:   #f7f1ff
+!*.background:   #222222
+!*.cursorColor:  #f7f1ff
+
+! blackfont
+!*.color0:       #363537
+!*.color8:       #8b888f
+
+! red
+!*.color1:       #fc618d
+!*.color9:       #fc618d
+
+! green
+!*.color3:       #7bd88f
+!*.color11:      #7bd88f
+
+! yellow
+!*.color2:       #fce566
+!*.color10:      #fce556
+
+! blue
+!*.color4:       #5ad4e6
+!*.color12:      #5ad4e6
+
+! magenta
+!*.color5:       #948ae3
+!*.color13:      #948ae3
+
+! cyan
+!*.color6:       #fd9353
+!*.color14:      #fd9353
+
+! white
+!*.color7:       #f7f1ff
+!*.color15:      #f7f1ff
