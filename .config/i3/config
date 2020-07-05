@@ -172,7 +172,7 @@ for_window [class="Spotify"] move to workspace $workspace10
 
 # Defining Color palette
 set $bg-color 	         #00000000
-set $text-color          #f7f1ffff
+set $text-color          #f7f7f7ff
 set $inactive-text-color #f7f1ff75
 set $urgent-text-color   #fc618dff
 
