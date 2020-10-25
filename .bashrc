@@ -144,6 +144,7 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 # Bin folder
 if [ -d "$HOME/bin" ] ; then
     export PATH="$HOME/bin:$PATH"
+	export PATH="$HOME/.bin:$PATH"
 fi
 
 # Alias for dotflies backup
