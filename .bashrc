@@ -149,3 +149,6 @@ fi
 
 # Alias for dotflies backup
 alias config='/usr/bin/git --git-dir=/home/isak/.dotfiles/ --work-tree=/home/isak'
+
+# Simplify updates
+alias pacu='sudo pacman -Syu'
