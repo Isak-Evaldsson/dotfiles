@@ -1,5 +1,5 @@
 # Cloning repo
-git clone --bare https://github.com/Isak-Evaldsson/dotfiles $HOME/.cfg
+git clone --bare https://github.com/Isak-Evaldsson/dotfiles $HOME/.dotfiles
 
 # Temporary alias 
 function config {
