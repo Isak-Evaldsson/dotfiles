@@ -3,4 +3,4 @@ A backup of my dotfiles using the bare repo method (https://www.atlassian.com/gi
 
 # Install dotfiles to a computer:
 Simply run:
-``` curl -s https://raw.githubusercontent.com/Isak-Evaldsson/dotfiles/master/install_dotfiles.sh | /bin/bash```
+``` curl -s https://raw.githubusercontent.com/Isak-Evaldsson/dotfiles/master/.dotfiles-scripts/install_dotfiles.sh | /bin/bash```
