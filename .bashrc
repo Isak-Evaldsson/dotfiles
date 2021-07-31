@@ -2,46 +2,24 @@
 # ~/.bashrc
 #
 
+# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-colors() {
-	local fgc bgc vals seq0
 
-	printf "Color escapes are %s\n" '\e[${value};...;${value}m'
-	printf "Values 30..37 are \e[33mforeground colors\e[m\n"
-	printf "Values 40..47 are \e[43mbackground colors\e[m\n"
-	printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
-
-	# foreground colors
-	for fgc in {30..37}; do
-		# background colors
-		for bgc in {40..47}; do
-			fgc=${fgc#37} # white
-			bgc=${bgc#40} # black
-
-			vals="${fgc:+$fgc;}${bgc}"
-			vals=${vals%%;}
-
-			seq0="${vals:+\e[${vals}m}"
-			printf "  %-9s" "${seq0:-(default)}"
-			printf " ${seq0}TEXT\e[m"
-			printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
-		done
-		echo; echo
-	done
-}
-
+# Use bash-completion, if available
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
-# Change the window title of X terminals
+
+#Change the window title of X terminals 
 case ${TERM} in
-	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
-		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-		;;
-	screen*)
-		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-		;;
+        xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
+                PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
+                ;;
+        screen*)
+                PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
+                ;;
 esac
+
 
 use_color=true
 
@@ -113,6 +91,10 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
+#-----------------------------
+#	Nice utility functions
+#-----------------------------
+
 #
 # # ex - archive extractor
 # # usage: ex <file>
@@ -138,17 +120,36 @@ ex ()
   fi
 }
 
-# better yaourt colors
-export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
+#
+# # prepend_path - adds supplied arugmets to path
+# # usage: ex <path>
+prepend_path () {
+  if [ -d "$1" ]; then
+    export PATH="$1:$PATH"
+  fi
+}
 
-# Bin folder
-if [ -d "$HOME/bin" ] ; then
-    export PATH="$HOME/bin:$PATH"
-    export PATH="$HOME/.bin:$PATH"
-fi
+#-----------------------------
+#	Configure Path
+#-----------------------------
 
-# Alias for dotflies backup
+## Adding bin to path
+prepend_path $HOME/bin
+prepend_path $HOME/.bin
+
+
+#-----------------------------
+#	Nice Aliases
+#-----------------------------
+
+# dotflies backup
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Simplify updates
 alias pacu='sudo pacman -Syu'
+
+
+#-----------------------------
+#	Clean Up
+#-----------------------------
+unset -f prepend_path
