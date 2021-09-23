@@ -13,6 +13,9 @@ fi
 
 ## Custom additions
 alias ls='ls --color=auto'
+alias pacsu='sudo pacman -Syu'
+alias gs='git status'
+alias gl='git log'
 
 # Dotfiles alias
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
