@@ -171,7 +171,7 @@ for_window [class="Spotify"] move to workspace $workspace10
 
 
 # Defining Color palette
-set $bg-color 	         #00000000
+set $bg-color 	         #0000009f
 set $text-color          #f7f7f7ff
 set $inactive-text-color #f7f1ff75
 set $urgent-text-color   #fc618dff
@@ -213,7 +213,7 @@ exec nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Desktop Wallpapper
-exec_always feh --bg-scale ~/.backgrounds/bigsur.jpg
+exec_always feh --bg-scale ~/.backgrounds/mac_red.png
 
 # Transperancy
 exec_always picom
