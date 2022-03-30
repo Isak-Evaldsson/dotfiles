@@ -1,13 +1,14 @@
 [user]
-	name = Isak-Evaldsson
+	name = Isak Evaldsson
 	email = isak.evaldsson@outlook.com
 [core]
 	autocrlf = input
 	editor = nano
-[filesystem "N/A|13.0.1|/dev/nvme0n1p2"]
-	timestampResolution = 62000 nanoseconds
-	minRacyThreshold = 5859 microseconds
 
 # Enforce SSH
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
+
+# Avoids unnecesary merges  
+[pull]
+	rebase = true
